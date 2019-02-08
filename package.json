@@ -1,0 +1,53 @@
+{
+  "name": "all-of-them",
+  "version": "1.0.0",
+  "description": ":bus: Clone all of the repositories from a GitHub organization",
+  "main": "dist/index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmxpy/all-of-them.git"
+  },
+  "keywords": [
+    "sudoo"
+  ],
+  "author": "WMXPY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wmxpy/all-of-them/issues"
+  },
+  "homepage": "https://github.com/wmxpy/all-of-them#readme",
+  "dependencies": {
+    "@sudoo/bark": "^2.1.0"
+  },
+  "devDependencies": {
+    "@sudoo/triforce": "^1.2.0",
+    "@types/node": "^10.12.21"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ],
+    "instrument": true,
+    "reporter": [
+      "json",
+      "text-summary"
+    ],
+    "report-dir": "coverage",
+    "require": [
+      "./test/tshook.js"
+    ],
+    "sourceMap": true
+  }
+}
